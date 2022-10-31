@@ -26,4 +26,5 @@ public class Catalog {
 
         }
     }
+    //el print deberia estar bien pero no estoy seguro del getProducto()
 }
