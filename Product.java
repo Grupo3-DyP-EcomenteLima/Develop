@@ -25,4 +25,6 @@ public class Product {
     public void set_product(){
 
     }
+    
+    //en un rato añado los metodos
 }
