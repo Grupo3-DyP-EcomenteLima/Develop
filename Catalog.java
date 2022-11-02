@@ -20,4 +20,13 @@ public class Catalog {
         return temp; // devuelve un objeto producto que se debe añadir al carrito
     }
 
+    public void addproduct(Product p){ // p viene del vendedor y esta se usa al agregar al catalogo
+        for(int i = 0; i <catalogo.length; i++){
+            if(catalogo[i] == null ) {
+                catalogo[i] = p;
+                break;
+            }
+        }
+    }
+
 }
