@@ -1,15 +1,10 @@
 package pe.edu.upc.UsuarioBuilder;
 
 public class UserDirector {
-
-    private SellerBuilder sellerBuilder;
-
-    public void construct(SellerBuilder constructor){
-
+    private UserBuilder sellerBuilder;
+    public void construct(UserBuilder constructor){
         sellerBuilder = constructor;
-
-
+        sellerBuilder.pedirdatos();
     }
-
 
 }

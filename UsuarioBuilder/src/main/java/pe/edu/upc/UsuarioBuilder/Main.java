@@ -7,16 +7,17 @@ public class Main {
 
         System.out.println("**Prueba user builder**");
 
+        System.out.println("**  Registrar vendedor  **");
+
         UserDirector director = new UserDirector();
 
-        SellerBuilder seller = new SellerConcreteBuilder();
-
-        List<SellerConcreteBuilder> listaSeller;
+        UserBuilder seller = new SellerConcreteBuilder();
 
         director.construct(seller);
         User u1 = seller.getUser();
 
-
+        System.out.println("**  Mostrar vendedor **");
+        u1.mostrardatos();
 
     }
 }

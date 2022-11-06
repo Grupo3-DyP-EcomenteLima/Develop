@@ -1,52 +1,23 @@
 package pe.edu.upc.UsuarioBuilder;
 
-public class SellerConcreteBuilder implements SellerBuilder{
+import java.util.Scanner;
 
-    long bankAccount;
-    String brand;
-
+public class SellerConcreteBuilder implements UserBuilder{
     private User usuario = new User();
-
+    Scanner entrada = new Scanner(System.in);
     @Override
-    public void setPaymentMethod() {
-        System.out.println("Metodo agregado");
+    public void pedirdatos() {
+        System.out.println("Ingrese su nombre completo: ");
+        usuario.setFullName(entrada.nextLine());
+        System.out.println("Ingrese su nombre de la marca: ");
+        usuario.setBrand(entrada.next());
+        System.out.println("Ingrese su cuenta bancaria: ");
+        usuario.setBankAccount(entrada.nextLong());
+        System.out.println("Ingrese su correo electronico: ");
+        usuario.setEmail(entrada.next());
+        System.out.println("Ingrese una contraseña: ");
+        usuario.setPassword(entrada.next());
     }
-
-    @Override
-    public void addProduct() {
-        System.out.println("Producto agregado");
-    }
-
-    @Override
-    public void deleteProduct() {
-        System.out.println("Producto eliminado");
-    }
-
-    @Override
-    public void modProduct() {
-        System.out.println("Producto modificado");
-    }
-
-    @Override
-    public long getBankAccount() {
-        return bankAccount;
-    }
-
-    @Override
-    public void setBankAccount(long bankAccount) {
-    this.bankAccount=bankAccount;
-    }
-
-    @Override
-    public String getBrand() {
-        return brand;
-    }
-
-    @Override
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
     @Override
     public User getUser(){
         return usuario;
