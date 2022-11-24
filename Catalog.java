@@ -9,9 +9,18 @@ public class Catalog {
         catalogo = new Product[9];
     } // numero de posibles productos en el catalogo actual por definición de variable
 
+    public void Print_product(Product p){
+        System.out.println(p.getp_name()+" \n");
+        System.out.println("Marca: "+p.getBrand());
+        System.out.println("Stock: "+p.getStock()+" \n");
+        System.out.println(p.getDesc()+" \n");
+        System.out.println("Cantidad por compra: "+p.getQuantity()+" Unidades \n");
+        System.out.println("Precio: $"+p.getPrice()+" \n");
+    }
+
     public void printcatalog(){
         for(int i = 0; i <catalogo.length; i++){
-            catalogo[i].Print_product();
+            if(catalogo[i] != null) { Print_product(catalogo[i]); }
         }
     }
 
